@@ -1,0 +1,93 @@
+/* Footer styling */
+.footer {
+    background-color: #2b2a2a; /* Background color for footer */
+    color: #fff; /* Text color */
+    padding-top: 20px;
+    padding: 0 5vw; /* Replace fixed padding with relative units */
+}
+
+/* Flex container for contact and social links */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Positions items on left and right */
+    align-items: flex-start;
+    margin-bottom: 10px; /* Adds spacing for the copyright section */
+    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
+}
+
+/* Contact Box and Social Links */
+.contact-box, .social-links {
+    flex: 1; /* Each section takes up equal width */
+    max-width: 45%; /* Controls the maximum width of each section */
+    padding: 10px;
+}
+
+/* Social Links */
+.social-links {
+    text-align: right;
+    margin-left: 30px;
+}
+
+/* Social Links Images */
+.social-links img {
+    width: 40px; /* Adjust icon size as needed */
+    height: 40px;
+    margin-left: 50px;
+    vertical-align: middle;  
+    padding-right: 31px;
+}
+
+/* Copyright styling */
+.copy-rights {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    border-top: 1px solid #555; /* Adds a subtle border above the copyright */
+}
+
+.contact-box p {
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.contact-box .icon {
+    margin-right: 15px; /* Space between icon and text */
+    color: #0077ff; /* Icon color */
+    font-size: 1.5em; /* Icon size */
+}
+
+.contact-box a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-box a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack the footer items vertically */
+        align-items: center; /* Center-align items for smaller screens */
+    }
+
+    .contact-box, .social-links {
+        max-width: 100%; /* Allow the sections to take full width */
+        text-align: center; /* Center-align content */
+        margin: 10px 0; /* Space between sections */
+    }
+
+    .social-links img {
+        margin-left: 15px; /* Reduce margin on smaller screens */
+        margin-right: 15px; /* Reduce margin on smaller screens */
+    }
+
+    .copy-rights {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}

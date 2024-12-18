@@ -1,0 +1,67 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5vw; /* Consistent viewport-based horizontal padding */
+    background-color: #1a1a1a; 
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Ensure padding is included in element's width */
+    width: 100%; /* Ensure navbar spans the full width */
+}
+
+.navbar h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    white-space: nowrap; /* Prevent title from wrapping */
+    margin: 0; /* Remove any default margin */
+}
+
+.navbar a {
+    font-size: 20px;
+    margin: 0 25px; /* Horizontal spacing between links */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #fdf865;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
+        padding: 1rem 2vw; /* Adjust padding for better spacing on mobile */
+    }
+
+    .navbar h1 {
+        font-size: 1.25rem; /* Reduce font size for mobile */
+        margin-bottom: 0.5rem; /* Spacing below the title */
+    }
+
+    .navbar a {
+        font-size: 0.85rem; /* Adjust link font size for mobile */
+        margin-right: auto; /* Add vertical spacing between links */
+    }
+}
+
+/* Very Small Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem 1rem; /* Minimal padding for compact screens */
+        gap: 0.75rem; /* Slightly smaller gap for very small screens */
+    }
+
+    .navbar h1 {
+        font-size: 2rem; /* Reduce title size for smaller screens */
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Smaller font size for links */
+        margin-right: 0.25rem 0; /* Minimal spacing between links */
+    }
+}

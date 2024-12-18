@@ -1,0 +1,191 @@
+.contact-body {
+    padding: 10px; /* Adjusted padding for better responsiveness */
+    justify-content: center;
+    background-color: rgb(210, 217, 230);
+    box-sizing: border-box; /* Ensures padding is included in total width */
+    padding-bottom: 2rem;
+}
+
+.contact-body h2, p {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.contact-body h2 {
+    font-size: 2rem;
+    text-align: center; /* Centers the heading */
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to stack on smaller screens */
+    gap: 6rem; /* Adds spacing between items */
+    padding: 10px;
+    justify-content: center; /* Ensures proper alignment */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(210, 217, 230);
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    max-width: 500px;
+    width: 100%; /* Responsive width */
+    box-sizing: border-box;
+}
+
+.form:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 1.0);
+    transition: all 0.3s ease;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.contact-form h3 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    margin-bottom: 10px;
+    border: 1px solid #1a1a1a;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 75px;
+    overflow-y: auto;
+}
+
+.contact-form button {
+    background-color: #0095ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0751a1;
+}
+
+.contact-details {
+    background-color: rgb(210, 217, 230);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    max-width: 500px;
+    width: 100%; /* Responsive width */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.contact-details:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 1.0);
+    transition: all 0.3s ease;
+}
+
+.contact-details h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.contact-details .icon {
+    margin-right: 10px;
+}
+
+/* Responsive styles */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+        gap: 4rem;
+        padding: 1.5rem;
+    }
+
+    .contact-body h2 {
+        font-size: 1.75rem;
+        text-align: center; /* Centers the heading */
+    }
+
+    .form, .contact-details {
+        max-width: 48%; /* Take up half of the screen on medium-sized devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        padding: 1.25rem;
+    }
+
+    .form, .contact-details {
+        max-width: 90%; /* Full width for smaller devices */
+        margin: 0 auto;
+    }
+
+    .contact-body h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .contact-form h3, .contact-details h3 {
+        font-size: 1.25rem; /* Adjust sub-heading size */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        flex-direction: column;
+        gap: 3rem; /* Narrower gap for smaller screens */
+        padding: 1rem;
+    }
+
+    .form, .contact-details {
+        max-width: 100%; /* Full width for the smallest devices */
+    }
+
+    .contact-body h2 {
+        font-size: 1.25rem;
+    }
+
+    .contact-form h3, .contact-details h3 {
+        font-size: 1.25rem;
+    }
+
+    .contact-details p {
+        font-size: 0.75rem; /* Smaller font for very small screens */
+    }
+
+    .contact-details .icon {
+        margin-right: 8px;
+    }
+}

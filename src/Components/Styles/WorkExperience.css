@@ -1,0 +1,141 @@
+/* WorkExperience.css */
+.work-timeline {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+}
+
+.work-experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.toggle-icon {
+    font-size: 2rem; /* 32px */
+    font-weight: normal;
+}
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem; /* 20px = 1.25rem */
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.25rem 0; /* 20px = 1.25rem */
+    border-bottom: 0.0625rem solid #ddd; /* 1px = 0.0625rem */
+    position: relative;
+}
+
+.timeline-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-left,
+.timeline-right {
+    width: 45%;
+}
+
+.timeline-left {
+    padding-left: 1.875rem; /* 30px = 1.875rem */
+}
+
+.timeline-right {
+    text-align: right;
+    padding-right: 1.875rem; /* 30px = 1.875rem */
+}
+
+.timeline-left h2,
+.timeline-right h3 {
+    margin: 0;
+}
+
+.timeline-left p,
+.timeline-right p {
+    font-size: 0.875rem; /* 14px = 0.875rem */
+    margin: 0.3125rem 0; /* 5px = 0.3125rem */
+}
+
+.description {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.875rem; /* 14px = 0.875rem */
+    margin-top: 0.625rem; /* 10px = 0.625rem */
+}
+
+.description li {
+    margin-bottom: 0.3125rem; /* 5px = 0.3125rem */
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-icon{
+        font-size: 1.5rem;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .timeline-left {
+        margin-bottom: 20px;
+    }
+
+    .timeline-left h2{
+        font-size: 0.9rem;
+    }
+
+    .timeline-right {
+        text-align: left;
+    }
+
+    .timeline-right h3{
+        font-size: 0.9rem;
+    }
+
+    .timeline-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 48rem) { /* 768px = 48rem */
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .timeline-left {
+        margin-bottom: 1.25rem; /* 20px = 1.25rem */
+    }
+
+    .timeline-right {
+        text-align: left;
+    }
+
+    .timeline-content {
+        flex-direction: column;
+    }
+}

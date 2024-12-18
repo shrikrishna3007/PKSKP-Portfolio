@@ -1,0 +1,120 @@
+/* Base Body Style */
+.portfolio-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+/* Portfolio Content */
+.portfolio-content {
+    display: flex;
+    flex-direction: row; /* Default for laptop/desktop layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 5vw;
+    gap: 2rem;
+}
+
+/* Text Section */
+.portfolio-text {
+    flex: 1; /* Occupies left side on large screens */
+    text-align: left;
+    max-width: 50%; /* Adjusts for desktop layout */
+}
+
+.portfolio-text h1, 
+.portfolio-text h2 {
+    margin: 0.5rem 0;
+}
+
+.portfolio-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.portfolio-btns {
+    margin-top: 1.5rem;
+}
+
+.portfolio-btns button {
+    margin: 0.5rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-btns .discover {
+    background-color: #007bff;
+    color: white;
+}
+
+.portfolio-btns .discover:hover {
+    background-color: #0056b3;
+}
+
+.portfolio-btns .contact {
+    background-color: #28a745;
+    color: white;
+}
+
+.portfolio-btns .contact:hover {
+    background-color: #218838;
+}
+
+/* Image Section */
+.portfolio-image {
+    flex: 0.5; /* Occupies right side on large screens */
+    text-align: center;
+}
+
+.portfolio-image img {
+    width: 100%; /* Responsive image width */
+    max-width: 300px; /* Limit image size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .portfolio-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .portfolio-text {
+        max-width: 90%; /* Adjust text width for mobile */
+    }
+
+    .portfolio-image img {
+        max-width: 150px; /* Reduce image size for mobile */
+        margin: 1rem 0;
+    }
+
+    .portfolio-btns button {
+        width: auto; /* Allow buttons to fit content */
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .portfolio-content {
+        max-width: 1200px; /* Set a maximum width for the content */
+        margin: 0 auto; /* Center the layout */
+    }
+
+    .portfolio-text {
+        max-width: 50%; /* Limit text width for desktop */
+    }
+
+    .portfolio-image img {
+        max-width: 300px; /* Fixed image size for desktop */
+    }
+}
